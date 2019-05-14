@@ -1,4 +1,4 @@
-# CYPHER_IOT-DC-WRKSPC
+# CYPHER IOT Decentralized Workspace
 
 IOT and node appliction 
 
