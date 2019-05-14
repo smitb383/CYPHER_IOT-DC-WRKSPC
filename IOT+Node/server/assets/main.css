@@ -1,0 +1,254 @@
+ @import url("https://fonts.googleapis.com/css?family=Lato:300");
+ @import url("https://fonts.googleapis.com/css?family=Lato:100");
+
+ html {
+     font-family: 'Lato', sans-serif;
+     font-size: 20px;
+ }
+
+ h1 {
+     text-align: center;
+     font-size: 80px;
+
+ }
+
+ #buttons {
+     display: flex;
+     margin: 20px;
+     margin-left: 80%;
+
+ }
+
+ #hmbutton,
+ #hmbutton2 {
+     font-size: 20px;
+     padding: 10px;
+     margin-right: 10px;
+     text-decoration: none;
+     background-color: lightgray;
+     color: white;
+ }
+
+
+ #landingImage {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 200px;
+ }
+
+ #tagline {
+     margin-top: 50px;
+     text-align: center;
+     font-size: 50px;
+     color: lightgrey;
+     margin-left: auto;
+     margin-right: auto;
+     width: 50%;
+ }
+
+ #background {
+     position: absolute;
+     left: 0;
+     top: 0;
+     z-index: -1;
+     margin: 0px;
+     object-fit: cover;
+     max-width: 100%;
+     max-height: stretch;
+     /* background-size: cover; */
+ }
+
+ #userPage {
+     margin: 0px;
+     margin-top: 300px;
+     display: flex;
+ }
+
+ #welcome {
+     margin: 0px;
+     margin-left: 400px;
+
+
+ }
+
+ @media (min-width: 1025px) {
+     #userWelcome {
+         margin: 0px;
+         margin-bottom: 50px;
+         font-size: 170px;
+         text-align: right;
+         color: white;
+         padding: 0em;
+         padding-right: 1em;
+         font-weight: 300;
+         text-shadow: 10px 10px 20px #000;
+
+         animation: fade-in 4s;
+         /* animation-delay: 3s; */
+
+     }
+
+     @keyframes fade-in {
+         from {
+             opacity: 0;
+             transform: translate(300px, 0px);
+             delay: 3s;
+         }
+
+         to {
+             opacity: 1;
+
+         }
+
+     }
+
+     #navigation {
+         margin: none;
+         padding: none;
+         margin-left: 50px;
+         /* border: 1px solid red; */
+         animation: fade-side 6s;
+         /* animation-delay: 3s; */
+
+     }
+
+     @keyframes fade-side {
+         from {
+             opacity: 0;
+             transform: translate(0px, 200px);
+             delay: 3s;
+         }
+
+         to {
+             opacity: 1;
+         }
+
+     }
+
+     #nav {
+         text-decoration: none;
+         font-size: 30px;
+         margin-bottom: 4em;
+         padding: 10px;
+         background-color: white;
+         text-align: center;
+         color: gray;
+
+
+
+     }
+
+     a {
+         /* border: 1px solid red; */
+         background-size: auto;
+         display: block;
+     }
+
+     a:hover {}
+ }
+
+ /* following css is for settings page */
+ #settingBckgrnd {
+     width: 750px;
+     margin-right: auto;
+     margin-left: auto;
+
+     justify-content: center;
+     /* padding: 25px; */
+
+     display: flex;
+
+
+ }
+
+ #icon {
+     width: 150px;
+     margin-right: auto;
+     margin-left: auto;
+     padding: 50px;
+     /* border: 1px solid red; */
+ }
+
+ h2 {
+     text-align: center;
+     font-size: 80px;
+     margin-bottom: 50px;
+     color: white;
+     padding: 0em;
+     font-weight: 300;
+     text-shadow: 10px 10px 20px #000;
+ }
+
+ #settings {
+     color: white;
+     background-color: grey;
+     text-decoration: none;
+     font-size: 20px;
+     margin-bottom: 20px;
+     text-align: center;
+     width: 140px;
+     padding: 5px;
+     margin-right: auto;
+     margin-left: auto;
+ }
+
+ #element {
+     /* border: 1px solid black; */
+     margin: 20px;
+     background-color: lightgrey;
+     box-shadow: 0px 5px 20px #000;
+     height: 550px;
+     /* align-self: stretch; */
+ }
+
+ #dropDown {
+     display: none;
+     background-color: lightgrey;
+ }
+
+ #customize {
+     color: white;
+     background-color: grey;
+     text-decoration: none;
+     font-size: 20px;
+     margin-bottom: 20px;
+     text-align: center;
+     width: 140px;
+     padding: 5px;
+     margin-right: auto;
+     margin-left: auto;
+     align-content: center;
+ }
+
+ #slider {
+     color: white;
+     background-color: grey;
+     text-decoration: none;
+     font-size: 20px;
+     margin-bottom: 20px;
+     text-align: center;
+     width: 140px;
+     padding: 5px;
+     margin-right: auto;
+     margin-left: auto;
+     align-content: center;
+     justify-content: space-around;
+     margin-left: 50px;
+     margin-right: 50px;
+
+ }
+
+ #lighting {
+     color: white;
+     background-color: grey;
+     text-decoration: none;
+     font-size: 20px;
+     margin-bottom: 20px;
+     text-align: center;
+     width: 140px;
+     padding: 5px;
+     margin-right: auto;
+     margin-left: auto;
+
+ }

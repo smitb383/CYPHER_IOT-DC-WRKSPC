@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Canvas animation based on https://www.kirupa.com/snippets/examples/simple_canvas_animation.htm -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <h2>My Cypher System</h1>
+        <img id="background" src="background_Profile@4x-100.jpg">
+        <div id="settingBckgrnd">
+            <div id="element">
+                <img id="icon" src="lightbulb-2.png">
+                <a id="lighting" href="docs/work/work.html"> Customize</a>
+                <div id="dropDown">
+                    <a id="customize" href="docs/work/work.html"> Brightness</a>
+                    <img id="slider" src="brightnessSlider@4x.png">
+                    <a id="customize" href="docs/work/work.html"> Color</a>
+                    <img id="slider" src="colorSlider@4x.png">
+
+                    <!-- <a id="settings" href="docs/work/work.html"> Color</a> -->
+                </div>
+            </div>
+            <div id="element">
+                <img id="icon" src="desktop-2.png">
+                <a id="settings" href="docs/work/work.html"> Customize</a>
+            </div>
+            <div id="element">
+                <img id="icon" src="chair-2.png">
+                <a id="settings" href="docs/work/work.html"> Customize</a>
+            </div>
+        </div>
+
+        <script>
+            let lighting = document.getElementById('lighting')
+            let dropDown = document.getElementById('dropDown')
+            dropDown.addEventListener('mouseover', display);
+
+            lighting.addEventListener('mouseover', display);
+            dropDown.addEventListener('mouseout', hide);
+            // lighting.addEventListener('mouseout', hide);
+
+            function display() {
+                console.log("hover hover");
+                lighting.style.display = "none";
+                dropDown.style.display = "block";
+                dropDown.style.height = "220px";
+            }
+
+            function hide() {
+
+                console.log("off off");
+                lighting.style.display = "block";
+                dropDown.style.display = "none";
+            }
+        </script>
+</body>
+
+</html>

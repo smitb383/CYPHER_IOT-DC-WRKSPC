@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Canvas animation based on https://www.kirupa.com/snippets/examples/simple_canvas_animation.htm -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Cypher</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+
+    <div id="buttons">
+        <a id="hmbutton" href="docs/work/work.html"> Discover</a>
+        <a id="hmbutton2" href="docs/work/work.html"> Join</a>
+    </div>
+
+
+    <img id="landingImage" src="landingwhite.png">
+
+    <div id="tagline">
+        <p>Safer with Cypher</p>
+    </div>
+    <img id="background" src="">
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        var socket = io.connect('http://localhost:8080');
+
+        let counter = 0;
+        socket.on('data', function (message) {
+            console.log("server is on in analogue HTML");
+            console.log(message);
+
+            if (message.data == 1 && counter == 0) {
+                //remove old elements and load bckground image 
+                console.log("got data");
+                document.getElementById('hmbutton').style.display = "none";
+                document.getElementById('hmbutton2').style.display = "none";
+                const intro = document.getElementById('tagline');
+                intro.parentNode.removeChild(intro);
+                const logo = document.getElementById('landingImage');
+                logo.parentNode.removeChild(logo);
+                document.getElementById("background").src = "background_Profile@4x-100.jpg";
+
+                //create a div for navigation elements and create new nav elements 
+                var navigation = document.createElement("div");
+                var a = document.createElement('a');
+                var linkText = document.createTextNode("WrkSpc");
+                a.appendChild(linkText);
+                a.setAttribute("id", 'nav');
+                a.href = "http://example.com";
+                navigation.appendChild(a);
+                //second nav element
+                var a2 = document.createElement('a');
+                var linkText2 = document.createTextNode("Settings");
+                a2.appendChild(linkText2);
+                a2.setAttribute("id", 'nav');
+                a2.href = "settings.html";
+                navigation.appendChild(a2);
+                //third nav element
+                var a3 = document.createElement('a');
+                var linkText3 = document.createTextNode("Calendar");
+                a3.appendChild(linkText3);
+                a3.setAttribute("id", 'nav');
+                a3.href = "http://example.com";
+                navigation.appendChild(a3);
+                navigation.setAttribute('id', 'navigation');
+
+                //create user welcome sign
+                var welcome = document.createElement("div");
+                welcome.setAttribute('id', 'welcome');
+                var userWelcome = document.createElement('p');
+                var t = document.createTextNode("Welcome ");
+                userWelcome.appendChild(t);
+                userWelcome.setAttribute("id", "userWelcome");
+
+                var userWelcome2 = document.createElement('p');
+
+                var t2 = document.createTextNode("Uschi.");
+                userWelcome2.appendChild(t2);
+                userWelcome2.setAttribute("id", "userWelcome");
+
+                welcome.appendChild(userWelcome);
+                welcome.appendChild(userWelcome2);
+
+
+
+
+                //div for navigation and user title and putting those elements in div 
+                let userPage = document.createElement("div");
+                userPage.setAttribute('id', 'userPage');
+                userPage.appendChild(navigation);
+                userPage.appendChild(welcome);
+
+
+                document.body.appendChild(userPage);
+
+
+
+            }
+            counter++;
+        });
+    </script>
+
+
+</body>
+
+</html>
